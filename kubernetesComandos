@@ -1,0 +1,5 @@
+kubectl run <nombre> --image=<imagen> --> crea un pod 
+kubectl get pods --> lista de pods 
+kubectl describe pod <nombre del pod> --> Muestra logs del pod 
+kubectl api-resources --> Muestra recursos asociados a kubectl 
+kubectl delete pods <listado de nombres de pods> --> borra lista de pods 
