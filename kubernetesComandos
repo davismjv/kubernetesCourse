@@ -3,3 +3,11 @@ kubectl get pods --> lista de pods
 kubectl describe pod <nombre del pod> --> Muestra logs del pod 
 kubectl api-resources --> Muestra recursos asociados a kubectl 
 kubectl delete pods <listado de nombres de pods> --> borra lista de pods 
+kubectl get pod <nombre pod> -o yaml --> entrega todos los datos del pod
+kubectl exec -ti <nombre-pod> -- sh --> ingresa a terminal del contenedor
+kubectl logs <nombre-pod>  --> logs de un pod
+kubectl apply -f <nombre-archivo yaml>  --> ejecuta instrucciones de archivo yaml
+kubectl delete -f <nombre-archivo yaml>  --> elimina pods y containers de archivo yaml
+kubectl logs <pod> -c <contenedor>  --> muestra logs de 1 contenedor cuando el pod tiene varios contenedores
+kubectl exec -ti <nombre-pod> -c <contenedor>-- sh --> ingresa a terminal del contenedor si en un pod hay varios contenedores
+kubectl get pods -l <nombreLabel=valorLabel> --> muestra pods solo con cierto label
