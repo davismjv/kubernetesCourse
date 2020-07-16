@@ -11,3 +11,6 @@ kubectl delete -f <nombre-archivo yaml>  --> elimina pods y containers de archiv
 kubectl logs <pod> -c <contenedor>  --> muestra logs de 1 contenedor cuando el pod tiene varios contenedores
 kubectl exec -ti <nombre-pod> -c <contenedor>-- sh --> ingresa a terminal del contenedor si en un pod hay varios contenedores
 kubectl get pods -l <nombreLabel=valorLabel> --> muestra pods solo con cierto label
+kubectl label pod <pod> <new-label=label>
+kubectl get deployment --show-labels --> muestra labels
+kubectl rollout status  deployment <nombre>--> muestra info del deployment
