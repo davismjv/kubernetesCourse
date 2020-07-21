@@ -1,0 +1,1 @@
+docker run --rm -dti -v /home/davism/kubernetesCourse/k8s-hands-on/:/go --net host --name golang golang bash

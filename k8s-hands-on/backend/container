@@ -1,0 +1,1 @@
+docker run -d -p 9091:9090 --name k8s-hands-on k8s-hands-on
