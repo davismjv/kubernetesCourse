@@ -23,3 +23,6 @@ kubectl get svc -l app=fron --> muestra servicios con label app=front
 kubectl get endpoints --> muestra endpoints
 kubectl get pods -l app=front -o wide --> muetra mas datos de los pods
 kubectl run --rm -ti <nombre-por> --image<nombre-imagen> --sh --> crea pod interactivo temporal para ingresar por sh
+kubectl get namespaces --> muestra los namespaces
+kubectl get pods --namespace <namespace>--> muestra los pods en el namespace
+kubectl create namespace  <namespace>--> Crea namespace

@@ -1,0 +1,1 @@
+docker build -t fronted-k8s-hands-on:v1 -f Dockerfile .

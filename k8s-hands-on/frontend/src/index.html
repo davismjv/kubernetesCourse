@@ -1,0 +1,28 @@
+<!DOCTYPE html PUBLIC"-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>K8s-Hands-On</title>
+    <script>
+        var xmlhttp = new XMLHttpRequest();
+        var url = "http://10.99.101.10";
+
+        xmlhttp.onreadystatechange = function () {
+            if (this.readyState == 4 && this.status == 200) {
+                var resp = JSON.parse(this.responseText);
+                document.getElementById("id01").innerHTML = "<h2>La hora es " + resp.time + " y el hostname es:" + resp.hostname + "</h2>";
+            }
+        };
+        xmlhttp.open("GET", url, true);
+        xmlhttp.send();
+
+    </script>
+</head>
+
+<body>
+    <div id="id01"></div>
+    <img src="https://miro.medium.com/max/722/0*QE2vUlkh0cfIdmLr.jpg">
+</body>
+
+</html>
