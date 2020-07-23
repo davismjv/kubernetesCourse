@@ -26,3 +26,8 @@ kubectl run --rm -ti <nombre-por> --image<nombre-imagen> --sh --> crea pod inter
 kubectl get namespaces --> muestra los namespaces
 kubectl get pods --namespace <namespace>--> muestra los pods en el namespace
 kubectl create namespace  <namespace>--> Crea namespace
+svcName + nsName + svc.cluster.local --> asi se crean los dns de los servicios
+kubectl confi current-context --> contexto actual
+kubectl config view --> configuracion de donde se toma el contexto
+kubectl config set-context ci-context --namespace=ci --cluster=minikube --user=mionikue --> crea un nuevo contexto
+kubectl config use-context <context-name> --> cambiar de contexto, un contexto apunto a un namespace
