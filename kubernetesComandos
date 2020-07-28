@@ -29,5 +29,6 @@ kubectl create namespace  <namespace>--> Crea namespace
 svcName + nsName + svc.cluster.local --> asi se crean los dns de los servicios
 kubectl confi current-context --> contexto actual
 kubectl config view --> configuracion de donde se toma el contexto
-kubectl config set-context ci-context --namespace=ci --cluster=minikube --user=mionikue --> crea un nuevo contexto
+kubectl config set-context ci-context --namespace=ci --cluster=minikube --user=minikube --> crea un nuevo contexto
 kubectl config use-context <context-name> --> cambiar de contexto, un contexto apunto a un namespace
+kubectl get limitRange--> muestra limits range
