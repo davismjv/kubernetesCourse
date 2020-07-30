@@ -32,3 +32,4 @@ kubectl config view --> configuracion de donde se toma el contexto
 kubectl config set-context ci-context --namespace=ci --cluster=minikube --user=minikube --> crea un nuevo contexto
 kubectl config use-context <context-name> --> cambiar de contexto, un contexto apunto a un namespace
 kubectl get limitRange--> muestra limits range
+kubectl create configmap <nombre> --from-file=<ruta archivo>
