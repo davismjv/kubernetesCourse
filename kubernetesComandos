@@ -33,3 +33,5 @@ kubectl config set-context ci-context --namespace=ci --cluster=minikube --user=m
 kubectl config use-context <context-name> --> cambiar de contexto, un contexto apunto a un namespace
 kubectl get limitRange--> muestra limits range
 kubectl create configmap <nombre> --from-file=<ruta archivo>
+kubectl create secrete generic <nombre> --from-file=<ruta> --> crea un secreto desde un archivo
+envsubst < <archivo-origen> > <archivo-salida> --> sustituye las variables de entorno
