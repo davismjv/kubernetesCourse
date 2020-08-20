@@ -1,0 +1,1 @@
+https://github.com/ricardoandre97/k8s-resources

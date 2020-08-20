@@ -36,3 +36,5 @@ kubectl create configmap <nombre> --from-file=<ruta archivo>
 kubectl create secrete generic <nombre> --from-file=<ruta> --> crea un secreto desde un archivo
 envsubst < <archivo-origen> > <archivo-salida> --> sustituye las variables de entorno
 kubectl edit <tipo objeto ><nombre objeto> --> permite editar el yaml de un objeto
+kubectl cluster-info --> muestra informacion de donde esta corriendo el cluster
+kubectl cluster-info dump | grep authorization-mode --> Verifica si RBAC esta habilitado
