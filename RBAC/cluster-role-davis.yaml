@@ -1,8 +1,7 @@
 apiVersion: rbac.authorization.k8s.io/v1
-kind: Role
+kind: ClusterRole
 metadata:
-  namespace: default
-  name: pod-reader
+  name: cluster-pod-reader
 rules:
 - apiGroups: [""] # "" indicates the core API group
   resources: ["pods"]
@@ -12,10 +11,9 @@ rules:
   verbs: ["get", "watch", "list"]
 ---
 apiVersion: rbac.authorization.k8s.io/v1
-kind: RoleBinding
+kind: ClusterRoleBinding
 metadata:
-  name: read-pods
-  namespace: default
+  name: cluster-read-pods
 subjects:
 # You can specify more than one "subject"
 - kind: User
@@ -23,6 +21,6 @@ subjects:
   apiGroup: rbac.authorization.k8s.io
 roleRef:
   # "roleRef" specifies the binding to a Role / ClusterRole
-  kind: Role #this must be Role or ClusterRole
-  name: pod-reader # this must match the name of the Role or ClusterRole you wish to bind to
+  kind: ClusterRole #this must be Role or ClusterRole
+  name: cluster-pod-reader # this must match the name of the Role or ClusterRole you wish to bind to
   apiGroup: rbac.authorization.k8s.io
