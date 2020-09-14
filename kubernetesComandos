@@ -39,3 +39,23 @@ kubectl edit <tipo objeto ><nombre objeto> --> permite editar el yaml de un obje
 kubectl cluster-info --> muestra informacion de donde esta corriendo el cluster
 kubectl cluster-info dump | grep authorization-mode --> Verifica si RBAC esta habilitado
 kubectl get sa --> Muestra los service accounts
+
+Listar pods:
+DOCS: https://v1-15.docs.kubernetes.io/docs/reference/generated/kubernetes-api/v1.15/#-strong-api-overview-strong-
+
+Para consultar dentro de un pod la api de kubernetes mediante get
+
+curl https://10.96.0.1/api/v1/namespaces/default/pods/ --insecure
+
+Para que funciones el token consultar ejemplo aca: https://medium.com/@nieldw/using-curl-to-authenticate-with-jwt-bearer-tokens-55b7fac506bd
+
+Guardar el TOKEN
+TOKEN=$(cat /var/run/secrets/kubernetes.io/serviceaccount/token)
+
+curl -H "Authorization: Bearer ${TOKEN}" https://kubernetes/api/v1/namespaces/default/pods/ --insecure --> usando el token segun explicacion de pagina web anterior
+
+Listar Deployments:
+curl -H "Authorization: Bearer ${TOKEN}" https://kubernetes/apis/apps/v1/namespaces/default/deployments/ --insecure
+
+Listar Replicasets:
+curl -H "Authorization: Bearer ${TOKEN}" https://kubernetes/apis/apps/v1/namespaces/default/replicasets/ --insecure
