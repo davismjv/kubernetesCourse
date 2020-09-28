@@ -59,3 +59,7 @@ curl -H "Authorization: Bearer ${TOKEN}" https://kubernetes/apis/apps/v1/namespa
 
 Listar Replicasets:
 curl -H "Authorization: Bearer ${TOKEN}" https://kubernetes/apis/apps/v1/namespaces/default/replicasets/ --insecure
+
+Muestra la url del servicio para acceder de forma externa
+minikube service ingress-nginx --url -n ingress-nginx
+minikue service <service-name> --url -n ingress-nginx
