@@ -63,3 +63,12 @@ curl -H "Authorization: Bearer ${TOKEN}" https://kubernetes/apis/apps/v1/namespa
 Muestra la url del servicio para acceder de forma externa
 minikube service ingress-nginx --url -n ingress-nginx
 minikue service <service-name> --url -n ingress-nginx
+
+Instalar aws
+primero instalar pip3
+sudo apt install python3-pip
+pip3 install -U awscli
+
+ AKIAQYAZC7LDG6OGDYB6
+ DHYlnmdHan1TUWDS4yWGMzEn0SWomhKAmDCB7/Fo
+ us-east-1
