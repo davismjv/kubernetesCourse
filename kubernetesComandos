@@ -27,10 +27,12 @@ kubectl get namespaces --> muestra los namespaces
 kubectl get pods --namespace <namespace>--> muestra los pods en el namespace
 kubectl create namespace  <namespace>--> Crea namespace
 svcName + nsName + svc.cluster.local --> asi se crean los dns de los servicios
-kubectl confi current-context --> contexto actual
+
+kubectl config current-context --> contexto actual
 kubectl config view --> configuracion de donde se toma el contexto
 kubectl config set-context ci-context --namespace=ci --cluster=minikube --user=minikube --> crea un nuevo contexto
 kubectl config use-context <context-name> --> cambiar de contexto, un contexto apunto a un namespace
+
 kubectl get limitRange--> muestra limits range
 kubectl create configmap <nombre> --from-file=<ruta archivo>
 kubectl create secrete generic <nombre> --from-file=<ruta> --> crea un secreto desde un archivo
@@ -68,3 +70,6 @@ Instalar aws
 primero instalar pip3
 sudo apt install python3-pip
 pip3 install -U awscli
+
+crear Cluster aws eks
+eksctl create cluster --name test-cluster --without-nodegroup --region us-east-1 --zones us-east-1a,us-east-1b
